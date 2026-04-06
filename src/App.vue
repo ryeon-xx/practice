@@ -2,12 +2,14 @@
   <div class="app">
     <h1>가계부</h1>
     <ExpenseForm @add-expense="addExpense"/>
+    <ExpenseList :expenses="expenses"/>
   </div>
 </template>
 
 <script setup>
 import ExpenseForm from './components/ExpenseForm.vue';
 import { ref } from 'vue';
+import ExpenseList from './components/ExpenseList.vue';
 
 const expenses = ref([]) // 빈 배열로 시작
 
